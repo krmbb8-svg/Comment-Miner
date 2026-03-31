@@ -3,12 +3,29 @@
 @tailwind utilities;
 
 body {
-  background: #030712;
-  color: #f3f4f6;
+  background: #0a0a0a;
+  color: #ffffff;
 }
 
+/* Skeleton pulse animation */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.skeleton-pulse {
+  animation: skeleton-pulse 1.6s ease-in-out infinite;
+}
+
+/* Staggered bounce for loading dots */
+@keyframes bounce-dot {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-6px); }
+}
+
+/* Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
@@ -16,14 +33,15 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #374151;
-  border-radius: 3px;
+  background: #2a2a2a;
+  border-radius: 2px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
+  background: #3f3f46;
 }
 
+/* Recharts */
 .recharts-tooltip-cursor {
-  fill: rgba(255, 255, 255, 0.05);
+  fill: rgba(255, 255, 255, 0.03);
 }
